@@ -1,5 +1,9 @@
-console.log("Hello TypeScript");
+// console.log("Hello TypeScript");
 
-const nums: number[] = [];
+// const nums: number[] = [];
 
-const a = 10 + nums[0]
+// const a = 10 + nums[0]
+
+const someString = "typescript!";
+
+someString.endsWith("!")
