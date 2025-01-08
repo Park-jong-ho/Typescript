@@ -1,7 +1,5 @@
 // 배열 타입 방법 1 : type[]
 
-import { timeStamp } from "console";
-
   // let nums: number[] = [1,2,3,4,5]
   // let strs: string[] = ["a","b","c"]
   // let bools: boolean[] = [false, false, true]
@@ -125,6 +123,68 @@ import { timeStamp } from "console";
   // }
 
 
+  // 함수 타입
+
+  // Parameter
+  // function add(x:number, y:number): number {
+  //   return x + y;
+  // }
+
+  // const result = add(10, 5);
+
+  // Parameter2
+  // function addToCart(name: string, price: number, quantity: number = 1) {
+  //   return `${name}, ${price}, ${quantity}`;
+  // }
+
+  // addToCart("orange", 100, 5)
+  // addToCart("pineapple", 150)
+  // addToCart("grape", 110, 10, false)
+  // addToCart("apple", 10)
+
+  // optional parameter
+  // function addToCart(name: string, price: number, quantity?: number) {
+  //     return `${name}, ${price}, ${quantity || 1}`;
+  //   }
+    
+  //   addToCart("orange", 150)
+  //   addToCart("grape", 100, 2)
+
+  // Contextual Typing
+  // const numbers: number[] = [1,2,3,4,5]
+  // const letters: string[] = ["a","b","c","d"]
+
+  // numbers.map(element=>{
+  //   element.
+  // })
+
+  // letters.forEach(letter=>{
+  //   letter.
+  // })
+
+  // Return type annotation
+  // function addTwoValues(x: number, y:number): string {
+  //   return `${x}${y}`;
+  // }
+
+  // function addTwoNumbers(x: number, y: number): number {
+  //   return x + y;
+  // }
+
+  // function isTen(x: number, y: number): boolean {
+  //   return x + y === 10;
+  // }
+
+  // void, never
+  // function logMessage(message:string): void {
+  //   console.log(message);
+  // }
+
+  // function throwError(message: string): never {
+  //   throw new Error(message);
+  // }
+
+
+
 
   
-
