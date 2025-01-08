@@ -353,3 +353,51 @@
     //   studentId: 12345,
     //   employeeId: 38383
     // }
+
+
+
+
+    // Tuples 기본 문법
+    let myTuple: [string, number, boolean]
+
+    myTuple = ["Hello", 15, false]
+    myTuple = ["hello", true, 13]
+    myTuple = ["Hello", 18]
+
+    // 사용 예시 1
+
+    function getUserInfo(): [number, string] {
+      return [1, "Sam"]
+    }
+
+    const [userid, usrename] = getUserInfo()
+
+    // 사용 예시 2
+
+    type Flavor = string;
+    type Price = number;
+
+    type IceCream = [Flavor, Price]
+
+    const vanila: IceCream = ["vanila", 500]
+
+    vanila[0]
+    vanila[1]
+
+    // 사용 에시 3
+
+    type lat = number;
+    type lng = number;
+
+    type coord = [lat, lng]
+
+    let coords: coord[] = [];
+
+    coords.push([36, -95])
+    coords.push([38, -38])
+
+    coords.push([false, "1"])
+
+    for(const [lat, lng] of coords) {
+      console.log(lat, lng);
+    }
