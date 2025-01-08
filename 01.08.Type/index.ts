@@ -1,5 +1,8 @@
 // 배열 타입 방법 1 : type[]
 
+import { Dir } from "fs";
+import { platform } from "os";
+
   // let nums: number[] = [1,2,3,4,5]
   // let strs: string[] = ["a","b","c"]
   // let bools: boolean[] = [false, false, true]
@@ -358,46 +361,100 @@
 
 
     // Tuples 기본 문법
-    let myTuple: [string, number, boolean]
+    // let myTuple: [string, number, boolean]
 
-    myTuple = ["Hello", 15, false]
-    myTuple = ["hello", true, 13]
-    myTuple = ["Hello", 18]
+    // myTuple = ["Hello", 15, false]
+    // myTuple = ["hello", true, 13]
+    // myTuple = ["Hello", 18]
 
     // 사용 예시 1
 
-    function getUserInfo(): [number, string] {
-      return [1, "Sam"]
-    }
+    // function getUserInfo(): [number, string] {
+    //   return [1, "Sam"]
+    // }
 
-    const [userid, usrename] = getUserInfo()
+    // const [userid, usrename] = getUserInfo()
 
     // 사용 예시 2
 
-    type Flavor = string;
-    type Price = number;
+    // type Flavor = string;
+    // type Price = number;
 
-    type IceCream = [Flavor, Price]
+    // type IceCream = [Flavor, Price]
 
-    const vanila: IceCream = ["vanila", 500]
+    // const vanila: IceCream = ["vanila", 500]
 
-    vanila[0]
-    vanila[1]
+    // vanila[0]
+    // vanila[1]
 
     // 사용 에시 3
 
-    type lat = number;
-    type lng = number;
+    // type lat = number;
+    // type lng = number;
 
-    type coord = [lat, lng]
+    // type coord = [lat, lng]
 
-    let coords: coord[] = [];
+    // let coords: coord[] = [];
 
-    coords.push([36, -95])
-    coords.push([38, -38])
+    // coords.push([36, -95])
+    // coords.push([38, -38])
 
-    coords.push([false, "1"])
+    // coords.push([false, "1"])
 
-    for(const [lat, lng] of coords) {
-      console.log(lat, lng);
+    // for(const [lat, lng] of coords) {
+    //   console.log(lat, lng);
+    // }
+
+
+
+
+  // 열거형(Enum) 기본 문법
+
+    // enum 이름 {
+    //   상수값1 = 1,
+    //   상수값2 = 16,
+    //   상수값3
+    // }
+
+    // 숫자형 Enum
+
+    // enum PlayerState{
+    //   Buffering,
+    //   Playing,
+    //   Paused,
+    //   Seeking,
+    // }
+
+    // let currentState: PlayerState;
+    
+    // currentState = PlayerState.Buffering;
+    // currentState = PlayerState.Playing;
+
+    // currentState = "Playing"
+
+    // const isPlaying = (state: PlayerState) => {
+    //   return state === PlayerState.Playing;
+    // }
+
+    // isPlaying(currentState);
+
+    // 문자형 Enum
+
+    enum Direction {
+      Left = "LEFT",
+      Right = "RIGHT",
+      Up = "UP",
+      Down = "DOWN"
     }
+
+    function move(dir: Direction) {
+      switch(dir) {
+        case Direction.Left:
+          break;
+        case Direction.Right:
+          break;
+      }
+    }
+
+    move(Direction.Left)
+    move(Direction.Right)
