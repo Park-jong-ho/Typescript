@@ -186,5 +186,76 @@
 
 
 
+// 유니언 타입 
 
-  
+// 유니언 기초
+// let userId: string | number;
+
+// userId = 1
+// userId = "100"
+
+// userId = true
+// userId = {}
+
+// function printUserId(id: string | number){
+//   console.log(id);
+// }
+
+// printUserId("1")
+// printUserId(1)
+
+// // type narrowing
+// function processValue(value: number | string){
+//   // 문자열 경우
+//   if(typeof value === "string") {
+//     return value.toUpperCase()
+//   }
+//   // 숫자인 경우
+//   return value.toString().toUpperCase();
+// }
+
+
+// 배열 사용 예시
+// let mixedValues: (string | number)[];
+
+// mixedValues.push("100")
+// mixedValues.push(100)
+
+// 리터럴과 유니언 타입
+// const toggle = (option: "on" | "off") => {
+//   console.log(option);
+// }
+
+// toggle("on")
+// toggle("off")
+
+// toggle("")
+
+// type Size = "xs" | "s" | "m" | "l" | "xl"
+
+// let tShirtSize: Size
+
+// tShirtSize = "m"
+
+// tShirtSize = "xxl"
+
+// function setSize(size: Size) {
+//   switch(size) {
+//     case "xs":
+//       break;
+//     case "s":
+//       break;
+//   }
+// }
+
+
+// type aliases와 유니언
+// type SuccessCode = 200 | 201 | 202
+// type ErrorCode = 500 | 501 | 503
+
+// let responseCode: SuccessCode | ErrorCode
+
+// responseCode = 200
+// responseCode = 503
+
+// responseCode = 403
