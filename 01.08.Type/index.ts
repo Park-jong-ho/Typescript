@@ -10,7 +10,6 @@
   // bools.push(1)
 
 
-
 // 배열 타입 방법 2 : Array<>
 
   // let nums: Array<number> = [1,2,3,4,5]
